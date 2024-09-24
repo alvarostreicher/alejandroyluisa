@@ -1,21 +1,22 @@
 const CalendarConfig = (title, description, location, startDate, endDate) => {
-    const icsContent = `
-  BEGIN:VCALENDAR
-  VERSION:2.0
-  BEGIN:VEVENT
-  SUMMARY:${title}
-  DESCRIPTION:${description}
-  DTSTART:${startDate}
-  DTEND:${endDate}
-  LOCATION:${location}
-  END:VEVENT
-  END:VCALENDAR
-    `;
-    const blob = new Blob([icsContent], { type: 'text/calendar' });
-    const url = window.URL.createObjectURL(blob);
+  //   const icsContent = `
+  // BEGIN:VCALENDAR
+  // VERSION:2.0
+  // BEGIN:VEVENT
+  // SUMMARY:${title}
+  // DESCRIPTION:${description}
+  // DTSTART:${startDate}
+  // DTEND:${endDate}
+  // LOCATION:${location}
+  // END:VEVENT
+  // END:VCALENDAR
+  //   `;
+    // const icsBase64 = btoa(icsContent);
+    // const dataUri = `data:text/calendar;base64,${icsBase64}`;
+    const calendarUrl = 'webcal://alvarostreicher.github.io/alejandroyluisa/assets/calendar/event.ics';
     const link = document.createElement('a');
-    link.href = url;
-    link.download = `${title}.ics`;
+    link.href = calendarUrl;
+    // link.download = `${title}.ics`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

@@ -17,8 +17,9 @@ body, html {
     display: block;
 }
 .invitation {
+    overflow: hidden;
     background-color: #E0CBA8;
-    background-image: url('/images/1.JPG');
+    background-image: url('/images/1.webp');
     filter: opacity(75%) saturate(0.6);
     background-size: cover;
     background-position: 47%;
@@ -66,7 +67,7 @@ body, html {
     font-weight: 400;
 }
 .calendar {
-    overflow: hidden;
+    overflow-x: hidden;
     margin: 2rem 0;
 }
 .calendar h2 {
@@ -409,6 +410,7 @@ body, html {
 .card button {
     width: 8rem;
     height: 2.5rem;
+    color: #000 !important;
     background-color: rgba(158, 140, 122, 0.45);
     outline: none;
     border: solid 2px rgba(22, 18, 18, 0.45);

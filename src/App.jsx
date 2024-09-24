@@ -1,21 +1,18 @@
 import React, { useEffect, useState, useRef } from 'react'
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
-import Snow from './constants/snow';
 import { motion } from "framer-motion"
 import AddToCalendar from './components/AddToCalendar';
 import { eventDetails } from './constants/calendar';
 import music from './assets/thinking_out_loud.mp3'
-import circle_image from './assets/2.jpg'
+import circle_image from './assets/2.webp'
 import circle_names from './assets/circle_names.svg'
 import church_video from './assets/church.mp4'
 import church_image from './assets/church.jpg'
 import venue_image from './assets/venue.jpg'
-import slideshow1 from './assets/slideshow/slideshow-1.jpg'
-import slideshow2 from './assets/slideshow/slideshow-2.jpg'
-import slideshow3 from './assets/slideshow/slideshow-3.jpg'
-import slideshow4 from './assets/slideshow/slideshow-4.jpg'
-import slideshow5 from './assets/slideshow/slideshow-5.jpg'
+import slideshow1 from './assets/slideshow/slideshow-1.webp'
+import slideshow2 from './assets/slideshow/slideshow-2.webp'
+import slideshow3 from './assets/slideshow/slideshow-3.webp'
+import slideshow4 from './assets/slideshow/slideshow-4.webp'
+import slideshow5 from './assets/slideshow/slideshow-5.webp'
 import blazer from './assets/blazer.svg'
 import dress from './assets/dress.svg'
 import present from './assets/present.webm'
@@ -30,12 +27,8 @@ function App() {
 	const [ audioPlaying, setAudioPlaying ] = useState(false);
 	const audio = useRef();
     useEffect(() => {
-        initParticlesEngine(async (engine) => {
-            await loadSlim(engine);
-        }).then(() => {
-            setInit(true);
-        });
 
+	new	window.particlesJS('particles-js',{"particles":{"number":{"value":62,"density":{"enable":true,"value_area":800}},"color":{"value":"#fff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":6,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":500,"color":"#ffffff","opacity":0.4,"width":2},"move":{"enable":true,"speed":0.5,"direction":"bottom","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"bubble"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":0.5}},"bubble":{"distance":400,"size":4,"duration":0.3,"opacity":1,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true})
 	new window.FlipDown(1732456800, { theme: 'light', headings: ["Dias", "Horas", "Minutos", "Segundos"] }).start();
 
     }, []);
@@ -96,11 +89,8 @@ function App() {
   return (
     <>
     <main className="invitation">
-	{ init && <Particles
-            id="tsparticles"
-            options={Snow}
-			/>
-	}
+
+	<div id="particles-js" style={{width: '100%', height: '100%', position: 'absolute'}}></div>
 		<section className="content">
 			<motion.div
 				initial={{ opacity: 0, scale: 0.5 }}

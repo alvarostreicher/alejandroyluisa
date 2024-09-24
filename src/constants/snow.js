@@ -3,10 +3,10 @@ const options = {
     name: "Snow",
     particles: {
         number: {
-            value: 1000,
+            value: 800,
             density: {
                 enable: true,
-                area: 1000
+                area: 800
             },
         },
         color: {
