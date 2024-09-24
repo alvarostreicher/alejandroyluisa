@@ -230,7 +230,7 @@ function App() {
 			<motion.ellipse variants={genericDraw}
         custom={2} cx="11" cy="46.5" fill="#9D4F4F" rx="5" ry="5.5" className="svg-elem-2"></motion.ellipse>
 		  </motion.svg>		  
-		  <video src={church_video} autoPlay loop muted className="video"></video>
+		  <video src={church_video} autoPlay playsInline loop muted className="video"></video>
 		  <div className="pinpoint">
 			  <svg xmlns="http://www.w3.org/2000/svg" width="42" height="39" fill="none" viewBox="0 0 42 39">
 				<g clipPath="url(#a)">
@@ -317,7 +317,7 @@ function App() {
 	</section>
 
 	<section style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem'}}>
-		<video src={present} autoPlay loop muted></video>
+		<video src={present} autoPlay playsInline loop muted></video>
 		<p className="sections" style={{whiteSpace: 'nowrap'}}>Mesa De Regalos</p>
 		<img style={{height: '7rem', borderRadius: '28px', filter: "sepia(1)"}} src={amazon} />
 		<button className="wishlist-button">Amazon Wishlist</button>
@@ -330,7 +330,7 @@ function App() {
 			<path stroke="#4B4233" d="M0 .5h335"/>
 		</svg>
 		<p className="sections">Confirmar Asistencia</p>
-		<video src={plane} autoPlay loop muted></video>
+		<video src={plane} autoPlay playsInline loop muted></video>
 		<button className="add-calendar">Confirmar</button>
 		<p className="sections" style={{marginBottom: '3rem'}}>Estaremos Felices de compartir
 			este dia tan especial contigo!</p>

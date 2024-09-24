@@ -67,7 +67,6 @@ body, html {
     font-weight: 400;
 }
 .calendar {
-    overflow-x: hidden;
     margin: 2rem 0;
 }
 .calendar h2 {
