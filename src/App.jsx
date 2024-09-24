@@ -5,7 +5,25 @@ import Snow from './constants/snow';
 import { motion } from "framer-motion"
 import AddToCalendar from './components/AddToCalendar';
 import { eventDetails } from './constants/calendar';
+import music from './assets/thinking_out_loud.mp3'
+import circle_image from './assets/2.jpg'
+import circle_names from './assets/circle_names.svg'
+import church_video from './assets/church.mp4'
+import church_image from './assets/church.jpg'
+import venue_image from './assets/venue.jpg'
+import slideshow1 from './assets/slideshow/slideshow-1.jpg'
+import slideshow2 from './assets/slideshow/slideshow-2.jpg'
+import slideshow3 from './assets/slideshow/slideshow-3.jpg'
+import slideshow4 from './assets/slideshow/slideshow-4.jpg'
+import slideshow5 from './assets/slideshow/slideshow-5.jpg'
+import blazer from './assets/blazer.svg'
+import dress from './assets/dress.svg'
+import present from './assets/present.webm'
+import liverpool from './assets/liverpool.jpg'
+import amazon from './assets/amazon.png'
+import plane from './assets/plane.webm'
 import './App.css'
+
 
 function App() {
 	const [ init, setInit ] = useState(false);
@@ -179,7 +197,7 @@ function App() {
 	  		  
 		</button>
 		<audio id="audio" loop ref={audio}>
-			<source src="/thinking_out_loud.mp3" type="audio/mp3"/>
+			<source src={music} type="audio/mp3"/>
 		</audio>
 	</main>
 	<section id="my-story" className="story">
@@ -193,9 +211,9 @@ function App() {
 		</motion.div>
 		<section className="circle-container">
 			<div className="circle">
-				<img src="/images/2.JPG" alt="my story"/>
+				<img src={circle_image} alt="my story"/>
 			</div>
-			<img className="names-circle" src="/circle_names.svg" />
+			<img className="names-circle" src={circle_names} />
 		</section>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</section>
@@ -222,7 +240,7 @@ function App() {
 			<motion.ellipse variants={genericDraw}
         custom={2} cx="11" cy="46.5" fill="#9D4F4F" rx="5" ry="5.5" className="svg-elem-2"></motion.ellipse>
 		  </motion.svg>		  
-		  <video src="/church.mp4" autoPlay loop muted className="video"></video>
+		  <video src={church_video} autoPlay loop muted className="video"></video>
 		  <div className="pinpoint">
 			  <svg xmlns="http://www.w3.org/2000/svg" width="42" height="39" fill="none" viewBox="0 0 42 39">
 				<g clipPath="url(#a)">
@@ -242,7 +260,7 @@ function App() {
 		<span className="great-vibes">9:00 a.m.</span>
 
 		<section style={{padding: "1rem"}} className="card">
-				<img src="/images/church.jpg" alt="church" />
+				<img src={church_image} alt="church" />
 				<p>Parroquia del Sagrado Corazón de Jesús.</p>
 				<svg xmlns="http://www.w3.org/2000/svg" width="335" height="1" fill="none" viewBox="0 0 335 1">
 					<path stroke="#4B4233" d="M0 .5h335"/>
@@ -259,7 +277,7 @@ function App() {
 		<span className="great-vibes">16:00 p.m.</span>
 
 		<section style={{padding: "1rem"}} className="card">
-				<img src="/images/venue.jpg" alt="venue" />
+				<img src={venue_image} alt="venue" />
 				<p>La Herencia Monterrey, Santiago, Nuevo León.</p>
 				<svg xmlns="http://www.w3.org/2000/svg" width="335" height="1" fill="none" viewBox="0 0 335 1">
 					<path stroke="#4B4233" d="M0 .5h335"/>
@@ -272,19 +290,19 @@ function App() {
 
 	<section className="slideshow">
 		<div className="fade">
-			<img src="/images/slideshow/slideshow-1.jpg" />
+			<img src={slideshow1} />
 		</div>
 		<div className="fade">
-			<img src="/images/slideshow/slideshow-2.jpg" />
+			<img src={slideshow2} />
 		</div>
 		<div className="fade">
-			<img src="/images/slideshow/slideshow-3.jpg" />
+			<img src={slideshow3} />
 		</div>
 		<div className="fade">
-			<img src="/images/slideshow/slideshow-4.jpg" />
+			<img src={slideshow4} />
 		</div>
 		<div className="fade">
-			<img src="/images/slideshow/slideshow-5.jpg" />
+			<img src={slideshow5} />
 		</div>
 	</section>
 
@@ -293,9 +311,9 @@ function App() {
 			<path stroke="#4B4233" d="M0 .5h335"/>
 		</svg>
 		<div style={{display: "flex", justifyContent: "center"}}>
-			<img src="/blazer.svg" style={{width: '100%', height: '5rem'}} />		
+			<img src={blazer} style={{width: '100%', height: '5rem'}} />		
 			<p className="sections" style={{whiteSpace: 'nowrap'}}>Dress Code</p>
-			<img src="/dress.svg" style={{width: '100%', height: '5rem'}} />
+			<img src={dress} style={{width: '100%', height: '5rem'}} />
 		</div>
 		<p style={{textAlign: 'center', padding: '0 4rem'}}>Quisieramos ver a los hombres en traje y camisa blanca, detalles que combinen con tu pareja
 			para las chicas un vestido con los siguientes colores:</p>
@@ -309,11 +327,11 @@ function App() {
 	</section>
 
 	<section style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem'}}>
-		<video src="/present.webm" autoPlay loop muted></video>
+		<video src={present} autoPlay loop muted></video>
 		<p className="sections" style={{whiteSpace: 'nowrap'}}>Mesa De Regalos</p>
-		<img style={{height: '7rem', borderRadius: '28px', filter: "sepia(1)"}} src="/amazon.png" />
+		<img style={{height: '7rem', borderRadius: '28px', filter: "sepia(1)"}} src={amazon} />
 		<button className="wishlist-button">Amazon Wishlist</button>
-		<img style={{height: '4rem', borderRadius: '28px', filter: 'sepia(1)'}} src="/liverpool.jpg" />
+		<img style={{height: '4rem', borderRadius: '28px', filter: 'sepia(1)'}} src={liverpool} />
 		<button className="wishlist-button">Mesa de regalos Liverpool</button>
 	</section>
 
@@ -322,7 +340,7 @@ function App() {
 			<path stroke="#4B4233" d="M0 .5h335"/>
 		</svg>
 		<p className="sections">Confirmar Asistencia</p>
-		<video src="/plane.webm" autoPlay loop muted></video>
+		<video src={plane} autoPlay loop muted></video>
 		<button className="add-calendar">Confirmar</button>
 		<p className="sections" style={{marginBottom: '3rem'}}>Estaremos Felices de compartir
 			este dia tan especial contigo!</p>
